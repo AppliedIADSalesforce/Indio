@@ -34,48 +34,24 @@
 			{
     			"label":"First Name",
     			"name":"FirstName",
-    			"value":"Bill",
+    			"value":"Jane",
     			"displayToAgent":true,
 			"transcriptFields": ["FirstName__c"]
 			},
 			{
     			"label":"Last Name",
-    			"value":"Rando",
+    			"value":"Doe",
     			"displayToAgent":true,
 			"transcriptFields": ["LastName__c"]
 			},
 			{
     			"label":"Email",
-    			"value":"bhuston77@gmail.com",
+    			"value":"jane.doe@salesforce.com",
     			"displayToAgent":true,
 			"transcriptFields": ["Email__c"]
-				
-			}]; 
-		embedded_svc.settings.extraPrechatInfo = [{
-    			"entityName":"Contact",
-    			"showOnCreate":true,
-    			"linkToEntityName":"",
-    			"saveToTranscript":"ContactId",
-    			"entityFieldMaps": [{
-        			"isExactMatch":true,
-        			"fieldName":"FirstName",
-        			"doCreate":true,
-        			"doFind":true,
-        			"label":"First Name"
-    				}, {
-        			"isExactMatch":true,
-        			"fieldName":"LastName",
-        			"doCreate":true,
-        			"doFind":true,
-        			"label":"Last Name"
-    				}, {
-        			"isExactMatch":true,
-        			"fieldName":"Email",
-        			"doCreate":true,
-        			"doFind":true,
-        			"label":"Email"	
-    		
-		}];
+			}
+		];
+		
 		
 		embedded_svc.settings.enabledFeatures = ['LiveAgent'];
 		embedded_svc.settings.entryFeature = 'LiveAgent';
