@@ -11,6 +11,23 @@
 
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
+
+const queryString = window.location.search;
+	//console.log('QUERY STRING: ' & queryString);
+	const urlParams = new URLSearchParams(queryString);
+
+	const fName = urlParams.get('fname');
+	console.log('First Name: ' + fName);
+
+	const lName = urlParams.get('lname');
+	console.log('Last Name: ' + lName);
+
+	const eMail = urlParams.get('email');
+	console.log('Email: ' + eMail);
+
+	const uLanguage = urlParams.get('lang');
+	console.log('Language: ' + uLanguage);
+
 	var initESW = function(gslbBaseURL) {
 		embedded_svc.settings.displayHelpButton = true; //Or false
 		embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
@@ -34,25 +51,25 @@
 			{
     			"label":"First Name",
     			"name":"FirstName",
-    			"value":"Bill",
+    			"value":fName,
     			"displayToAgent":true,
 			"transcriptFields": ["FirstName__c"]
 			},
 			{
     			"label":"Last Name",
-    			"value":"Rando",
+    			"value":lName,
     			"displayToAgent":true,
 			"transcriptFields": ["LastName__c"]
 			},
 			{
     			"label":"Language",
-    			"value":"en_US",
+    			"value":uLanguage,
     			"displayToAgent":true,
 			"transcriptFields": ["User_Language__c"]
 			},
 			{
     			"label":"Email",
-    			"value":"bhuston77@gmail.com",
+    			"value":eMail,
     			"displayToAgent":true,
 			"transcriptFields": ["Email__c"]
 			}
