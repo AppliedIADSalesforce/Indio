@@ -129,7 +129,7 @@ const queryString = window.location.search;
 		embedded_svc.settings.enabledFeatures = ['LiveAgent'];
 		embedded_svc.settings.entryFeature = 'LiveAgent';
 
-		embedded_svc.init(
+		/* embedded_svc.init(
 			'https://appliedsystems--braddev.sandbox.my.salesforce.com',
 			'https://appliedsystems--braddev.sandbox.my.site.com/guestcommunity',
 			gslbBaseURL,
@@ -142,6 +142,22 @@ const queryString = window.location.search;
 				baseLiveAgentURL: 'https://d.la2s-core1.sfdc-yfeipo.salesforceliveagent.com/chat',
 				eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04IOt0000002d8XMAQ_18dc4357219',
 				isOfflineSupportEnabled: false
+			}
+		); */
+
+		embedded_svc.init(
+			'https://appliedsystems--devproa.sandbox.my.salesforce.com',
+			'https://appliedsystems--devproa.sandbox.my.site.com/AppliedClientCommunity',
+			gslbBaseURL,
+			'00DOt000009Jv5R',
+			'Indio_Chat',
+			{
+				baseLiveAgentContentURL: 'https://c.la2s-core1.sfdc-yfeipo.salesforceliveagent.com/content',
+				deploymentId: '57232000000KyxG',
+				buttonId: '5730e000000Kz3d',
+				baseLiveAgentURL: 'https://d.la2s-core1.sfdc-yfeipo.salesforceliveagent.com/chat',
+				eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I0e000000XZAWEA4_172569d4482',
+				isOfflineSupportEnabled: true
 			}
 		);
 	};
