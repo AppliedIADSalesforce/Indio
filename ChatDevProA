@@ -18,16 +18,20 @@ console.log('After QUERY STRING');
 	//console.log('QUERY STRING: ' & queryString);
 	const urlParams = new URLSearchParams(queryString);
 
-	const fName = urlParams.get('fname');
+	//const fName = urlParams.get('fname');
+	const fName = 'Test';
 	console.log('First Name: ' + fName);
 
-	const lName = urlParams.get('lname');
+	//const lName = urlParams.get('lname');
+	const lName = 'Contact';
 	console.log('Last Name: ' + lName);
 
-	const eMail = urlParams.get('email');
+	//const eMail = urlParams.get('email');
+	const eMail = 'paige51706@example.org';
 	console.log('Email: ' + eMail);
 
-	const uLanguage = urlParams.get('lang');
+	//const uLanguage = urlParams.get('lang');
+	const uLanguage = 'en_US';
 	console.log('Language: ' + uLanguage);
 
 	var initESW = function(gslbBaseURL) {
