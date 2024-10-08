@@ -12,8 +12,10 @@
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
 
+console.log('Before QUERY STRING');
 const queryString = window.location.search;
-	console.log('QUERY STRING: ' & queryString);
+console.log('After QUERY STRING');
+	//console.log('QUERY STRING: ' & queryString);
 	const urlParams = new URLSearchParams(queryString);
 
 	const fName = urlParams.get('fname');
