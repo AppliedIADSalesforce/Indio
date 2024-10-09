@@ -28,9 +28,15 @@ const queryString = window.location.search;
 	const uLanguage = urlParams.get('lang');
 	console.log('Language: ' + uLanguage);
 
+	if (uLanguage === 'fr')
+	{	
+		embedded_svc.settings.defaultMinimizedText = 'Discuter avec un Expert';
+	}
+	
 	var initESW = function(gslbBaseURL) {
 		embedded_svc.settings.displayHelpButton = true; //Or false
-		embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
+		//embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
+		embedded_svc.settings.language = uLanguage; //For example, enter 'en' or 'en-US'
 
 		//embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
 		//embedded_svc.settings.disabledMinimizedText = '...'; //(Defaults to Agent Offline)
@@ -39,10 +45,15 @@ const queryString = window.location.search;
 		//embedded_svc.settings.storageDomain = 'yourdomain.com'; //(Sets the domain for your deployment so that visitors can navigate subdomains during a chat session)
 
 		// Settings for Chat
-		//embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
+		embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
 			// Dynamically changes the button ID based on what the visitor enters in the pre-chat form.
 			// Returns a valid button ID.
-		//};
+			if (uLanguage == "fr")
+			{
+				console.log('return French button');
+				return "573Oz000000lgBt";
+			}
+		};
 		//embedded_svc.settings.prepopulatedPrechatFields = {}; //Sets the auto-population of pre-chat form fields
 		//embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
 		//embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
@@ -168,7 +179,7 @@ const queryString = window.location.search;
         </style>
     </head>
  <body>
-        <h1>Welcome to the UAT Indio Einstein Bot Chat Test Page!</h1>
+        <h1>Welcome to the UAT EN and FR Indio Einstein Bot Chat Test Page!</h1>
         <p>Please refer to the chat button in the bottom right corner.</p>
         <div>
             <h2> Please refer to the chat button in the bottom right corner </h2>
