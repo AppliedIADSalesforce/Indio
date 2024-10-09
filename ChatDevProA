@@ -12,26 +12,25 @@
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
 
-console.log('Before QUERY STRING');
 const queryString = window.location.search;
 console.log('After QUERY STRING');
 	//console.log('QUERY STRING: ' & queryString);
 	const urlParams = new URLSearchParams(queryString);
 
-	//const fName = urlParams.get('fname');
-	const fName = 'Test';
+	const fName = urlParams.get('fname');
+	//const fName = 'Test';
 	console.log('First Name: ' + fName);
 
-	//const lName = urlParams.get('lname');
-	const lName = 'Contact';
+	const lName = urlParams.get('lname');
+	//const lName = 'Contact';
 	console.log('Last Name: ' + lName);
 
-	//const eMail = urlParams.get('email');
-	const eMail = 'paige51706@example.org';
+	const eMail = urlParams.get('email');
+	//const eMail = 'paige51706@example.org';
 	console.log('Email: ' + eMail);
 
-	//const uLanguage = urlParams.get('lang');
-	const uLanguage = 'en_US';
+	const uLanguage = urlParams.get('lang');
+	//const uLanguage = 'en_US';
 	console.log('Language: ' + uLanguage);
 
 	var initESW = function(gslbBaseURL) {
